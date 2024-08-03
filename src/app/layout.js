@@ -1,5 +1,7 @@
 import { Inter , Outfit , Roboto_Flex } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +17,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={outfit.className}>{children}</body>
+       <body className={cn(outfit.className, 'bg-[#CFC8C0]')}>
+        <Header />
+        {children}
+        </body>
     </html>
   );
 }
